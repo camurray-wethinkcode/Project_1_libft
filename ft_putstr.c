@@ -19,16 +19,11 @@
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void    ft_putstr(char const *s)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+    if (s == 0)
+        return ;
+    write(1, s, ft_strlen(s));
 }
 /*
 **int		main(void)

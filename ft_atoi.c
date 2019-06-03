@@ -6,7 +6,7 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 15:17:48 by camurray          #+#    #+#             */
-/*   Updated: 2019/06/01 16:40:17 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/01 19:30:08 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int			ft_atoi(const char *nptr)
 	i = -1;
 	len = 0;
 	ret = 0;
-	while (ft_isspace(*nptr))
+	while (ft_iswhitespace(*nptr))
 		nptr++;
 	while (nptr[len])
 		len++;

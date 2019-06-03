@@ -18,23 +18,22 @@
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char    *ft_strcat(char *dest, char *src)
 {
-	unsigned int	i;
-	unsigned int	j;
-
-	i = 0;
-	while (s1[i] != '\0')
-		++i;
-	j = 0;
-	while (s2[i] != '\0')
-	{
-		s1[i] = s2[j];
-		i++;
-		++j;
-	}
-	s1[i] = '\0';
-	return (s1);
+    unsigned    int j;
+    unsigned    int i;
+    
+    j = 0;
+    i = 0;
+    while (dest[i])
+        i++;
+    while (src[j])
+    {
+        dest[i + j] = src[j];
+        j++;
+    }
+    dest[i + j] = '\0';
+    return (dest);
 }
 /*
 **int		main(void)
