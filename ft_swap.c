@@ -6,12 +6,16 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:21:28 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:13:40 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:44:58 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** swaps int a & b without overwriting any value
+** This function is an extra function and is not part of the
+** mandatory functions we need to recreate in the
+** libft project at wethinkcode.
+** This function swaps tha values of integer a & b without
+** overwriting or losing either value.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
 ** ft_swap.c ft_putstr.c ft_putchar.c
