@@ -6,15 +6,34 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:06:43 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 11:45:03 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 14:53:38 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** replaces string with null bytes
+** Recreation of the bzero function.
+** Input is a pointer to the string that needs its characters set
+** to null bytes and the length of the string.
+** I used unsigned char as a data type as I am working with
+** characters and don't need them to be signed.
+** I cast my input string to the same datatype unsigned char.
+** Logic:
+** 1) we receive a pointer to a string of characters
+** 2) we cast the string to the same datatype as our
+**    variable (unsigned char) and save the contents
+**    of our input string to our variable s1
+** 3) we start a loop, if the length of the string passed is zero
+**    the loop won't execute and bzero will do nothing and if
+**    the length of the string is not zero the loop will execute
+** 4) we set our counter variable i equal to zero to avoid garbage values
+** 5) we create a while loop that executes at least once and we compare
+**    our counter to the length of the string to iterate through the string
+**    this loop will stop executing once we've reached the end of the string
+** 6) inside this loop we set the character equal to zero, replacing its value
+** 7) and then we increment our counter to ensure the loop will end
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_strlen.c ft_strcpy.c
-** ft_bzero.c ft_putstr.c ft_putchar.c ft_memcmp.c
+** ft_bzero.c ft_putstr.c ft_memcmp.c
 */
 
 #include "libft.h"
@@ -22,9 +41,9 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
-    unsigned char   *s1;
+	unsigned char	*s1;
 
-    s1 = (unsigned char *)s;
+	s1 = (unsigned char *)s;
 	if (n != '0')
 	{
 		i = 0;
