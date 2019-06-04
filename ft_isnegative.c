@@ -6,12 +6,15 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:09:29 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/29 14:33:06 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:40:07 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns a nonzero if n is a negative integer
+** This is an extra function and is not part of the
+** mandatory functions we need to recreate in the
+** libft project at wethinkcode.
+** This function returns a nonzero if n is a negative integer.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
 ** ft_isnegative.c ft_putstr.c ft_putchar.c
