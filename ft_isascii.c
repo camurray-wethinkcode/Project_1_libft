@@ -6,15 +6,19 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:10:58 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/29 13:14:21 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:32:39 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** tests if c is within the 7 bit US ASCII range
+** Recreation of the isascii function.
+** Input is a single character that needs to be checked.
+** To check if it is a character on the ascii table.
+** Tests if c is within the 7 bit US ASCII range
+** which is from 0 to 127 and returns nonzero if yes.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_isascii.c ft_putstr.c ft_putchar.c
+** ft_isascii.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
