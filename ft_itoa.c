@@ -6,63 +6,81 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:12:29 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/31 14:00:17 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:54:30 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** converts an integer to a character
+** Recreation of the itoa function.
+** This function converts a given integer into a character.
+** Logic:
+** 1) we create a separate function to retrieve the length of the input
+**    using a simple loop, returning nonzero if the length is 0
+**    and incrementing a counter as we iterate first through the ones,
+**    then divide by 10 and iterate through the tens, then
+**    divide by ten and iterate through the hundreds, etc until the
+**    end of the number passed.
+** 2) we use malloc to create a memory slot for our character and add one
+**    to account for the end of string byte we need to add
+** 3) we add a safeguard if our malloc fails so that the function returns null
+** 4) we add an end of string byte to the end of our return character
+** 5) we reset the length that we added one to so we can use it in a loop
+** 6) we start from the first index of our character string
+** 7) we note a sign if the given number is less than 0
+** 8) we run through a loop and convert first the ones to char
+**    by reversing the atoi algorithm and then repeat on then tens, hundreds...
+** 9) we return our character string fully converted
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_intlen.c ft_strnew.c
-** ft_itoa.c ft_putstsr.c ft_putchar.c ft_memalloc.c ft_bzero.c
+** ft_itoa.c ft_putstsr.c ft_strlen.c ft_memalloc.c ft_bzero.c
 */
 
 #include "libft.h"
 
-static int        length(int nb)
+static int	length(int nb)
 {
-    int        s;
-    
-    if (nb == 0)
-        return (1);
-    s = 0;
-    if (nb < 0)
-        s = 1;
-    while (nb)
-    {
-        s++;
-        nb = nb / 10;
-    }
-    return (s);
+	int	s;
+
+	if (nb == 0)
+		return (1);
+	s = 0;
+	if (nb < 0)
+		s = 1;
+	while (nb)
+	{
+		s++;
+		nb = nb / 10;
+	}
+	return (s);
 }
 
-char            *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-    char            *str;
-    int                len;
-    unsigned int    num;
-    
-    len = length(n);
-    str = (char *)malloc(sizeof(char) * (len + 1));
-    if (!str)
-        return (NULL);
-    str[len] = '\0';
-    len--;
-    str[len] = '0';
-    if (n < 0)
-    {
-        str[0] = '-';
-        num = -n;
-    }
-    else
-        num = n;
-    while (num)
-    {
-        str[len] = ('0' + (num % 10));
-        num = num / 10;
-        len--;
-    }
-    return (str);
+	char			*str;
+	int				len;
+	unsigned int	num;
+
+	len = length(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	len--;
+	str[len] = '0';
+	if (n < 0)
+	{
+		str[0] = '-';
+		num = -n;
+	}
+	else
+		num = n;
+	while (num)
+	{
+		str[len] = ('0' + (num % 10));
+		num = num / 10;
+		len--;
+	}
+	return (str);
 }
 /*
 **int		main(void)
