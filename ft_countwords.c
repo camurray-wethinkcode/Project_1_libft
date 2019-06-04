@@ -6,17 +6,20 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:07:31 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/29 12:53:24 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:17:21 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** counts the number of words in a sentence
-** takes 2 inputs, a pointer to the string
-** & what character the words are delimited by
+** This is an extra function and is not part of the
+** mandatory functions we need to recreate in the
+** libft project at wethinkcode.
+** This function counts the number of words in a sentence
+** and takes 2 inputs, a pointer to the string
+** and what character the words are delimited by.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_countwords.c ft_putchar.c ft_putstr.c
+** ft_countwords.c ft_strlen.c ft_putstr.c
 */
 
 #include "libft.h"
@@ -48,13 +51,14 @@ int	ft_countwords(const char *s, char c)
 **	char	test4[500] = "How is libft going?";
 **	char	test5[500] = "Are you progressing at all?";
 **	char	test6[500] = "Can I offer you some help?";
-**	char	test7[500] = "Which function are you struggling to understand?";
-**	char	test8[500] = "Maybe you should be working with your
-**	team on this project?";
-**	char	test9[500] = "You know, you're learning some
-**	really valuable skills right now.";
-**	char	test10[500] = "The more you learn now,
-**	the easier your job will be one day.";
+**	char	test7[500] = "Which function are you strugg
+**ling to understand?";
+**	char	test8[500] = "Maybe you should be working wit
+**h your team on this project?";
+**	char	test9[500] = "You know, you're learning some rea
+**lly valuable skills right now.";
+**	char	test10[500] = "The more you learn now, the easi
+**er your job will be one day.";
 **	ft_putstr("\033[36mTest 1: input \"Hi!\"\n\033[0m");
 **	printf("%d\n", ft_countwords(test1, ' '));
 **	ft_putstr("\033[36mTest 2: input \"Hi there.\"\n\033[0m");
@@ -67,17 +71,17 @@ int	ft_countwords(const char *s, char c)
 **	printf("%d\n", ft_countwords(test5, ' '));
 **	ft_putstr("\033[36mTest 6: input \"Can I offer you some help?\"\n\033[0m");
 **	printf("%d\n", ft_countwords(test6, ' '));
-**	ft_putstr("\033[36mTest 7: input \"Which function are you
-**	struggling to understand?\"\n\033[0m");
+**	ft_putstr("\033[36mTest 7: input \"Which function are you strugg
+**ling to understand?\"\n\033[0m");
 **	printf("%d\n", ft_countwords(test7, ' '));
-**	ft_putstr("\033[36mTest 8: input \"Maybe you should be working
-**	with your team on this project?\"\n\033[0m");
+**	ft_putstr("\033[36mTest 8: input \"Maybe you should be working with your te
+**am on this project?\"\n\033[0m");
 **	printf("%d\n", ft_countwords(test8, ' '));
-**	ft_putstr("\033[36mTest 9: input \"You know, you're learning
-**	some really valuable skills right now.\"\n\033[0m");
+**	ft_putstr("\033[36mTest 9: input \"You know, you're learning some rea
+**lly valuable skills right now.\"\n\033[0m");
 **	printf("%d\n", ft_countwords(test9, ' '));
-**	ft_putstr("\033[36mTest 10: input \"The more you learn now,
-**	the easier your job will be one day.\"\n\033[0m");
+**	ft_putstr("\033[36mTest 10: input \"The more you learn now, the easi
+**er your job will be one day.\"\n\033[0m");
 **	printf("%d\n", ft_countwords(test10, ' '));
 **}
 */
