@@ -6,12 +6,15 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:09:15 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 09:21:56 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:31:07 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns nonzero if c is an uppercase character
+** Recreation of the isupper function.
+** Input is a single character that needs to be checked.
+** Function returns a nonzero if c is an uppercase character
+** as it appears on the ascii table.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
 ** ft_isupper.c ft_putstr.c ft_putchar.c
