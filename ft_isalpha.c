@@ -6,15 +6,20 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:10:43 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:25:23 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:30:03 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns nonzero if c is alphabetic only
+** Recreation of the isalpha function.
+** Input is a single character that needs to be checked.
+** To check if it is an alphabetic character.
+** Called functions isupper and islower from library
+** to do all the work for us with checking.
+** Function returns nonzero if c is alphabetic only.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_islower.c ft_isupper.c
-** ft_isalpha.c ft_putstr.c ft_putchar.c
+** ft_isalpha.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
