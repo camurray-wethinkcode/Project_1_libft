@@ -6,15 +6,18 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:11:47 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/29 15:11:06 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:38:10 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns nonzero if c is any whitespace character
+** Recreation of the isspace function.
+** Input is a single character that need to be checked.
+** Function returns a nonzero if c is any whitespace character
+** as appears on the ascii table (9 - 13 & ' ').
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_iswhitespace.c ft_putstr.c ft_putchar.c
+** ft_iswhitespace.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
