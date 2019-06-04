@@ -6,15 +6,21 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:10:34 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/29 13:02:51 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:26:44 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns nonzero if c is alphanumeric
+** Recreation of the isalnum function.
+** Input is a single character that need to be checked.
+** To check if it is an alpha numeric character, so
+** either a number or alphabetic character.
+** Called functions isalpha and isdigit from library
+** to do all the work for us with checking.
+** Function returns nonzero if c is alphanumeric.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_isalpha.c ft_isdigit.c
-** ft_isalnum.c ft_putchar.c ft_putstr.c ft_islower.c ft_isupper.c
+** ft_isalnum.c ft_strlen.c ft_putstr.c ft_islower.c ft_isupper.c
 */
 
 #include "libft.h"
