@@ -6,7 +6,7 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 15:17:48 by camurray          #+#    #+#             */
-/*   Updated: 2019/06/01 19:30:08 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 14:43:39 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@
 ** This is not the most seamless way of performing this function, but it works.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_atoi.c ft_putchar.c
-** ft_putstr.c ft_iswhitespace.c ft_strlen.c
+** ft_putstr.c ft_iswhitespace.c ft_strlen.c ft_isdigit.c
 */
 
 static int	overflow(unsigned long long overflow, int sign, const char *p)
@@ -69,7 +69,7 @@ static int	overflow(unsigned long long overflow, int sign, const char *p)
 		return (overflow * sign);
 }
 
-int			ft_atoi(const char *nptr)
+int			ft_atoi(const char *str)
 {
 	unsigned long long	ret;
 	int					len;
@@ -80,22 +80,21 @@ int			ft_atoi(const char *nptr)
 	i = -1;
 	len = 0;
 	ret = 0;
-	while (ft_iswhitespace(*nptr))
-		nptr++;
-	while (nptr[len])
+	while (ft_iswhitespace(*str))
+		str++;
+	while (str[len])
 		len++;
 	while (++i <= len)
 	{
-		if (ft_isdigit(nptr[i]))
-			ret = (ret * 10) + (nptr[i] - '0');
-		else if (i == 0 && (nptr[i] == '-' || nptr[i] == '+'))
-			sign = nptr[i] == '-' ? -1 : 1;
+		if (ft_isdigit(str[i]))
+			ret = (ret * 10) + (str[i] - '0');
+		else if (i == 0 && (str[i] == '-' || str[i] == '+'))
+			sign = str[i] == '-' ? -1 : 1;
 		else
-			return (overflow(ret, sign, nptr));
+			return (overflow(ret, sign, str));
 	}
-	return (overflow(ret, sign, nptr));
+	return (overflow(ret, sign, str));
 }
-
 /*
 **int		main(void)
 **{
@@ -105,24 +104,24 @@ int			ft_atoi(const char *nptr)
 **	ft_putstr("\033[36mTest 2: input \"\"\n\033[0m");
 **	printf("%d\n", atoi(""));
 **	printf("%d\n", ft_atoi(""));
-**	ft_putstr("\033[36mTest 3: input \"+2798\"\n\033[0m");
-**	printf("%d\n", atoi("+2798"));
-**	printf("%d\n", ft_atoi("+2798"));
-**	ft_putstr("\033[36mTest 4: input \"+0089\"\n\033[0m");
-**	printf("%d\n", atoi("+0089"));
-**	printf("%d\n", ft_atoi("+0089"));
-**	ft_putstr("\033[36mTest 5: input \"a56\"\n\033[0m");
-**	printf("%d\n", atoi("a56"));
-**	printf("%d\n", ft_atoi("a56"));
+**	ft_putstr("\033[36mTest 3: input \"+0\"\n\033[0m");
+**	printf("%d\n", atoi("+0"));
+**	printf("%d\n", ft_atoi("+0"));
+**	ft_putstr("\033[36mTest 4: input \"-0\"\n\033[0m");
+**	printf("%d\n", atoi("-0"));
+**	printf("%d\n", ft_atoi("-0"));
+**	ft_putstr("\033[36mTest 5: input \"0\"\n\033[0m");
+**	printf("%d\n", atoi("0"));
+**	printf("%d\n", ft_atoi("0"));
 **	ft_putstr("\033[36mTest 6: input \"     --s8\"\n\033[0m");
 **	printf("%d\n", atoi("     --s8"));
 **	printf("%d\n", ft_atoi("     --s8"));
 **	ft_putstr("\033[36mTest 7: input \"0001020304\"\n\033[0m");
 **	printf("%d\n", atoi("0001020304"));
 **	printf("%d\n", ft_atoi("0001020304"));
-**	ft_putstr("\033[36mTest 8: input \"0000000000110\"\n\033[0m");
-**	printf("%d\n", atoi("0000000000110"));
-**	printf("%d\n", ft_atoi("0000000000110"));
+**	ft_putstr("\033[36mTest 8: input \"-2147483648\"\n\033[0m");
+**	printf("%d\n", atoi("-2147483648"));
+**	printf("%d\n", ft_atoi("-2147483648"));
 **	ft_putstr("\033[36mTest 9: input \"-153\"\n\033[0m");
 **	printf("%d\n", atoi("-153"));
 **	printf("%d\n", ft_atoi("-153"));
@@ -201,12 +200,12 @@ int			ft_atoi(const char *nptr)
 **	ft_putstr("\033[36mTest 34: input \"0000000000-10-\"\n\033[0m");
 **	printf("%d\n", atoi("0000000000-10-"));
 **	printf("%d\n", ft_atoi("0000000000-10-"));
-**	ft_putstr("\033[36mTest 35: input \"
-**			-123A There is a Cat in my pants\"\n\033[0m");
+**	ft_putstr("\033[36mTest 35: input \"-123A There is a Cat in my pants
+**  \"\n\033[0m");
 **	printf("%d\n", atoi("-123A There is a Cat in my pants"));
 **	printf("%d\n", ft_atoi("-123A There is a Cat in my pants"));
-**	ft_putstr("\033[36mTest 36: input \"
-**			0129\\0012334\\0Hidden\\n123\"\n\033[0m");
+**	ft_putstr("\033[36mTest 36: input \"0129\\0012334\\
+**  0Hidden\\n123\"\n\033[0m");
 **	printf("%d\n", atoi("0129\0012334\0Hidden\n123"));
 **	printf("%d\n", ft_atoi("0129\0012334\0Hidden\n123"));
 **	ft_putstr("\033[36mTest 37: input \"123456789012345678999\"\n\033[0m");
