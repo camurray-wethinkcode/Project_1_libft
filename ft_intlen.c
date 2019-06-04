@@ -6,7 +6,7 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 15:07:54 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:11:38 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:19:37 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** finds the length of an integer
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_intlen.c ft_putstr.c ft_putchar.c
+** ft_intlen.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
