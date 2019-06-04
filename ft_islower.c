@@ -6,15 +6,18 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:09:08 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:14:06 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:37:24 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns a nonzero if c is a lowercase character
+** Recreation of the islower function.
+** input is a single character that needs to be checked.
+** Function returns a nonzero if c is a lowercase character
+** as appears on the ascii table.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_islower.c ft_putstr.c ft_putchar.c
+** ft_islower.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
