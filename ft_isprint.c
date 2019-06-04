@@ -6,16 +6,19 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:11:30 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/29 14:56:11 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:28:42 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns nonzero if c is a space or
-** a character for which ft_isgraph returns nonzero
+** Recreation of the isprint function.
+** Input is a single character that needs to be checked.
+** To check if it is a printable character on the ascii table.
+** Printable characters on the ascii table are between 32 and 126.
+** This function returns nonzero if c is printable.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_isprint.c ft_putstr.c ft_putchar.c
+** ft_isprint.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
