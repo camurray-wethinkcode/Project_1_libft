@@ -6,15 +6,17 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:21:42 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 09:45:24 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:13:18 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns corresponding uppercase letter if one exists
+** Recreation of the toupper function.
+** This function returns the corresponding
+** uppercase letter if one exists.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_islower.c
-** ft_toupper.c ft_putstr.c ft_putchar.c
+** ft_toupper.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
