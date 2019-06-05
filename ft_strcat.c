@@ -6,34 +6,36 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:17:03 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:11:18 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:06:41 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** concatenates s1 to the end of s2
+** Recreation of the strcat function.
+** This function concatenates s1 to the end of s2.
 ** to test: uncomment main
-** run gcc -Wall -Wextra -Werror ft_strcat.c ft_putstr.c ft_putchar.c
+** run gcc -Wall -Wextra -Werror
+** ft_strcat.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
 
-char    *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
-    unsigned    int j;
-    unsigned    int i;
-    
-    j = 0;
-    i = 0;
-    while (dest[i])
-        i++;
-    while (src[j])
-    {
-        dest[i + j] = src[j];
-        j++;
-    }
-    dest[i + j] = '\0';
-    return (dest);
+	unsigned int i;
+	unsigned int j;
+
+	i = 0;
+	j = 0;
+	while (s1[i])
+		i++;
+	while (s2[j])
+	{
+		s1[i + j] = s2[j];
+		j++;
+	}
+	s1[i + j] = '\0';
+	return (s1);
 }
 /*
 **int		main(void)
