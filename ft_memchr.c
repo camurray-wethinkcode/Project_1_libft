@@ -6,13 +6,15 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 16:03:58 by camurray          #+#    #+#             */
-/*   Updated: 2019/06/05 16:19:17 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:30:01 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Recreation of the memchr function.
 ** This function searches a memory block for a character.
+** In the main, the function rand() is a random
+** number generator used to generate input.
 ** The number 10000 that is multiplies in the main
 ** is the number of bits in a long data type.
 ** to test: uncomment main
