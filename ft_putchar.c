@@ -6,15 +6,16 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:14:57 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:12:26 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:59:35 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** prints c to standard output
+** Recreation of the putchar function.
+** This function prints c to the standard output.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_putchar.c ft_putstr.c
+** ft_putchar.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
