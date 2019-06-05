@@ -6,31 +6,32 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:17:48 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:13:56 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:08:36 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** copy src string into dst string
+** Recreation of the strcpy function.
+** This function copies the src string into the dst string.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_strcpy.c ft_putstr.c ft_putchar.c
+** ft_strcpy.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
 
-char    *ft_strcpy(char *dst, char *str)
+char	*ft_strcpy(char *dst, const char *src)
 {
-    int i;
-    
-    i = 0;
-    while (str[i])
-    {
-        dst[i] = str[i];
-        i++;
-    }
-    dst[i] = '\0';
-    return (dst);
+	int i;
+
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
 /*
 **int		main(void)
