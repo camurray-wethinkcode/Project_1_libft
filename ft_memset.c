@@ -6,34 +6,35 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:14:50 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:14:25 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:41:03 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** replaces each of the first len characters of b with c
-** returns b
+** Recreation of the memset function.
+** This function replaces each of the first len
+** characters of b with c and returns b.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_putstr.c
-** ft_memset.c ft_strcpy.c ft_putchar.c
+** ft_memset.c ft_strcpy.c ft_strlen.c
 */
 
 #include "libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    int                i;
-    unsigned char    *str;
-    
-    str = (unsigned char *)b;
-    i = 0;
-    while (len > 0)
-    {
-        str[i] = c;
-        len--;
-        i++;
-    }
-    return (b);
+	int				i;
+	unsigned char	*str;
+
+	str = (unsigned char *)b;
+	i = 0;
+	while (len > 0)
+	{
+		str[i] = c;
+		len--;
+		i++;
+	}
+	return (b);
 }
 /*
 **int		main(void)
