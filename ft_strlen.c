@@ -6,15 +6,16 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:19:01 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:12:09 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:10:06 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** finds the length of a string
+** Recreation of the strlen function.
+** This function finds the length of a string.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_strlen.c ft_putstr.c ft_putchar.c
+** ft_strlen.c ft_putstr.c
 */
 
 #include "libft.h"
