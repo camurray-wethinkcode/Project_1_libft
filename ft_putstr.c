@@ -6,24 +6,25 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:16:02 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 12:13:03 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:01:42 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** prints string s to the standard output
+** Recreation of the putstr function.
+** This function prints string s to the standard output.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_putstr.c ft_putchar.c
+** ft_putstr.c ft_putchar.c ft_strlen.c
 */
 
 #include "libft.h"
 
-void    ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
-    if (s == 0)
-        return ;
-    write(1, s, ft_strlen(s));
+	if (s == 0)
+		return (0);
+	write(1, s, ft_strlen(s));
 }
 /*
 **int		main(void)
