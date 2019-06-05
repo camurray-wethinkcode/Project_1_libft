@@ -6,15 +6,17 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:21:36 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/28 09:34:38 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:11:59 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** returns corresponding lowercase letter if one exists
+** Recreation fo the tolower function.
+** This function returns the corresponding
+** lowercase letter if one exists.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror ft_isupper.c
-** ft_tolower.c ft_putstr.c ft_putchar.c
+** ft_tolower.c ft_putstr.c ft_strlen.c
 */
 
 #include "libft.h"
