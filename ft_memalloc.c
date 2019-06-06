@@ -6,13 +6,13 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:52:56 by camurray          #+#    #+#             */
-/*   Updated: 2019/06/05 10:57:36 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/05 11:10:19 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** 	Recreation of the memalloc function.
-** This function allocates a memory block fo specified length.
+** Recreation of the memalloc function.
+** This function allocates a memory block of specified length.
 ** This function must return null if it fails to allocate memory.
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
@@ -52,6 +52,6 @@ void	*ft_memalloc(size_t size)
 **		return (0);
 **	}
 **	write(1, "It works\n", 9);
-**	return (1);
+**	return (0);
 **}
 */

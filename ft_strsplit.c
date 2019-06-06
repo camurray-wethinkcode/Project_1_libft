@@ -38,7 +38,7 @@
 ** 7) we reset our index so that we can return to the start of our string
 ** to test: uncomment main
 ** run gcc -Wall -Wextra -Werror
-** ft_strsplit.c
+** ft_strsplit.c ft_strncpy.c ft_strcmp.c
 */
 
 #include "libft.h"
