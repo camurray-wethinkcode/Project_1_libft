@@ -6,7 +6,7 @@
 /*   By: camurray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:06:05 by camurray          #+#    #+#             */
-/*   Updated: 2019/05/31 14:01:15 by camurray         ###   ########.fr       */
+/*   Updated: 2019/06/06 12:09:09 by camurray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include <stdio.h>
-# include <ctype.h>
+
+/*
+**# include <stdio.h> - included for using printf in main tests
+**# include <ctype.h> - included for using is functions in main tests
+*/
 
 typedef struct		s_list
 {
@@ -27,7 +30,9 @@ typedef struct		s_list
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
+char				ft_chardel(char c);
 int					ft_countwords(const char *s, char c);
+int					ft_intlen(int n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
@@ -55,13 +60,14 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
-void				ft_putcolor(char *s, char *color);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
+char				ft_search_and_replace(char *str, char a, char b);
+int					ft_setdigitzero(int c);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
@@ -85,7 +91,6 @@ char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strrev(char *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
@@ -93,7 +98,5 @@ char				*ft_strtrim(char const *s);
 void				ft_swap(int *a, int *b);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-int					ft_intlen(int n);
-char				*ft_strndup(const char *s1, size_t n);
 
 #endif
